@@ -41,15 +41,14 @@ func TestCalculate(t *testing.T) {
 		// decimal places
 		{1.5, "+", 1, 2.5, nil},
 		{1.55, "+", 1, 2.55, nil},
-		{1.555, "+", 1, 2.5549999999999997, nil},  // TODO: consider rounding
-		{1.5555, "+", 1, 2.5555000000000003, nil}, // TODO: consider rounding
+		{1.555, "+", 1, 2.5549999999999997, nil},
+		{1.5555, "+", 1, 2.5555000000000003, nil},
 
 		// negative decimal places
 		{-1.5, "+", 1, -0.5, nil},
 		{-1.55, "+", 1, -0.55, nil},
-		{-1.555, "+", 1, -0.5549999999999999, nil},  // TODO: consider rounding
-		{-1.5555, "+", 1, -0.5555000000000001, nil}, // TODO: consider rounding
-
+		{-1.555, "+", 1, -0.5549999999999999, nil},
+		{-1.5555, "+", 1, -0.5555000000000001, nil},
 	}
 
 	for _, test := range tests {

@@ -8,11 +8,15 @@ help:
 
 .PHONY: test
 test:
-	@go clean --testcache && go test ./...
+	@go clean --testcache && go test -v ./...
 
 .PHONY: test_unit
 test_unit:
-	@go clean --testcache && go test ./calculator/...
+	@go clean --testcache && go test -v ./calculator/...
+
+.PHONY: test_integration
+test_integration:
+	@go clean --testcache && go test -v ./integration/...
 
 .PHONY: cover
 cover:
