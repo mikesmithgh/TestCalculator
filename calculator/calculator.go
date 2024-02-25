@@ -8,7 +8,7 @@ import (
 func Calculate(operand1, operand2 float64, operator string) (float64, error) {
 	switch operator {
 	case "+":
-		return operand1 + operand2, nil
+		return operand1 - operand2, nil // intentional bug
 	case "-":
 		return operand1 - operand2, nil
 	case "*":
