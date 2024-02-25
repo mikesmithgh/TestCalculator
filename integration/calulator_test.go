@@ -14,7 +14,7 @@ const (
 	divisionByZeroMsg  = "division by zero is not allowed"
 )
 
-func TestRun(t *testing.T) {
+func TestCalculator(t *testing.T) {
 	errExitStatus := errors.New("exit status 1")
 	tests := []struct {
 		input    []string
