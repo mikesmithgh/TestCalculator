@@ -26,7 +26,7 @@ jobs:
       - name: Run tests with gotestfmt
         run: |
           set -euo pipefail
-          make testjsonfmt 2>&1 | tee /tmp/gotest.log | gotestfmt
+          make testjsonfmt 2>&1 | tee /tmp/gotest.log | grep -v 'make:' | gotestfmt
 
       - name: Upload test log
         uses: actions/upload-artifact@v2
