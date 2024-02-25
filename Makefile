@@ -2,13 +2,19 @@
 help:
 	@echo "==> describe make commands"
 	@echo ""
-	@echo "test      ==> run unit tests and integration tests"
-	@echo "test_unit ==> run unit tests"
-	@echo "cover     ==> run test coverage"
+	@echo "test             ==> run unit tests and integration tests"
+	@echo "testjsonfmt      ==> run unit tests and integration tests with json output"
+	@echo "test_unit        ==> run unit tests"
+	@echo "test_integration ==> run integration tests"
+	@echo "cover            ==> run test coverage"
 
 .PHONY: test
 test:
 	@go clean --testcache && go test -v ./...
+
+.PHONY: testjsonfmt
+testjsonfmt:
+	@go clean --testcache && go test -json -v ./...
 
 .PHONY: test_unit
 test_unit:
