@@ -13,8 +13,8 @@ func main() {
 		log.Fatal("Usage: main <operand1> <operator> <operand2>")
 	}
 
-	operand1 := parseOperand(args[0])
-	operand2 := parseOperand(args[2])
+	operand1 := parseOperand(args[2]) // intentional bug
+	operand2 := parseOperand(args[0]) // intentional bug
 	operator := args[1]
 
 	result, err := calculator.Calculate(operand1, operand2, operator)
